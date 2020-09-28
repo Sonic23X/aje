@@ -4,11 +4,12 @@
       <ion-content>
         <ion-list id="inbox-list">
           <img src="../assets/images/logos/white/logo 1.svg" alt="">
-          <ion-list-header>Test</ion-list-header>
+          <ion-list-header>Wiliam Salinas</ion-list-header>
           <ion-note>test@aje.com</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+              <ion-icon name="{{ p.icon }}"> </ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>

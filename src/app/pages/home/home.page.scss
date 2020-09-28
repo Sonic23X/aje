@@ -1,6 +1,31 @@
 
 /* Las variables scss utilizadas estan en global.scss  */
 
+.buttons-group
+{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.buttons-group::-webkit-scrollbar
+{
+  display: none !important;
+}
+
+.row-fluid
+{
+  white-space: nowrap !important;
+}
+
+.row-fluid button
+{
+  display: inline-block !important;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 ion-slides
 {
   width: 100%;

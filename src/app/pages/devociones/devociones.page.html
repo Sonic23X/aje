@@ -10,6 +10,16 @@
 </ion-header>
 
 <ion-content>
+
+  <div class="buttons-group">
+    <div class="row-fluid">
+      <button type="button" class="btn-aje">Inicio</button>
+      <button type="button" class="btn-aje-selected" (click)="viewDevociones( )">Devocionales</button>
+      <button type="button" class="btn-aje">Contenido</button>
+      <button type="button" class="btn-aje">Testimonios</button>
+    </div>
+  </div>
+
   <ion-card *ngFor="let d of devociones;" style="background-image: url( {{ d.image }} )">
     <ion-card-content>
       <ion-grid>

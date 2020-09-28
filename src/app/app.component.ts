@@ -15,27 +15,27 @@ export class AppComponent implements OnInit {
     {
       title: 'Inicio',
       url: '/home',
-      icon: 'mail'
+      icon: 'home-outline'
     },
     {
       title: 'Test',
       url: '/test',
-      icon: 'paper-plane'
+      icon: 'clipboard-outline'
     },
     {
       title: 'Escanear QR',
       url: '/qr',
-      icon: 'heart'
+      icon: 'qr-code'
     },
     {
       title: 'Perfil',
       url: '/perfil',
-      icon: 'warning'
+      icon: 'person'
     },
     {
       title: 'Salir',
       url: '/exit',
-      icon: 'warning'
+      icon: 'exit'
     },
   ];
 

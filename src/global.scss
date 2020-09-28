@@ -9,6 +9,39 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+.btn-aje-selected
+{
+  background: rgba(0,184,206,1) !important;
+  background: -moz-linear-gradient(left, rgba(0,184,206,1) 0%, rgba(0,72,105,1) 100%) !important;
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,184,206,1)), color-stop(100%, rgba(0,72,105,1))) !important;
+  background: -webkit-linear-gradient(left, rgba(0,184,206,1) 0%, rgba(0,72,105,1) 100%) !important;
+  background: -o-linear-gradient(left, rgba(0,184,206,1) 0%, rgba(0,72,105,1) 100%) !important;
+  background: -ms-linear-gradient(left, rgba(0,184,206,1) 0%, rgba(0,72,105,1) 100%) !important;
+  background: linear-gradient(to right, rgba(0,184,206,1) 0%, rgba(0,72,105,1) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b8ce', endColorstr='#004869', GradientType=1 ) !important;
+
+  border-radius: 50px;
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+}
+
+.btn-aje
+{
+  border-radius: 50px;
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+
+  background: rgba(18 , 18, 18, 1) !important;
+}
+
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
 
