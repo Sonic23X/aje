@@ -10,14 +10,13 @@
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <ion-icon name="{{ p.icon }}"> </ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+              <ion-label> {{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
       <div class="footer">
         <img src="../assets/images/logos/white/logo 2.svg" alt="">
-
         <p>Al estilo de jesús 2020© </p>
       </div>
     </ion-menu>

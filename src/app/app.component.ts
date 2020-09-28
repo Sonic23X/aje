@@ -39,30 +39,6 @@ export class AppComponent implements OnInit {
     },
   ];
 
-  temporaly =
-  [
-    {
-      title: 'Devocionales',
-      url: '/devocion',
-      icon: 'trash'
-    },
-    {
-      title: 'Contenido',
-      url: '/contenido',
-      icon: 'warning'
-    },
-    {
-      title: 'Testimonios',
-      url: '/testimonio',
-      icon: 'warning'
-    },
-    {
-      title: 'material',
-      url: '/contenido',
-      icon: 'archive'
-    },
-  ];
-
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -72,7 +48,7 @@ export class AppComponent implements OnInit {
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {
+      this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

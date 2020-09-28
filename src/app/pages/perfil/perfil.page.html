@@ -1,9 +1,65 @@
-<ion-header>
+<ion-header [translucent]="false">
   <ion-toolbar>
-    <ion-title>perfil</ion-title>
+    <ion-buttons slot="start" class="text-white">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../assets/images/logos/white/logo 2.svg" alt="">
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text class="text-white ion-text-center">
+          <h3>Mi perfil</h3>
+        </ion-text>
+      </ion-col>
+    </ion-row>
 
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-avatar style="height: 200px; width: 200px;">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text class="text-white ion-text-center">
+          <h3>Mi nombre:</h3>
+        </ion-text>
+        <ion-text color="dark ion-text-center">
+          <h3>Wiliams Salinas</h3>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text class="text-white ion-text-center">
+          <h3>Mi teléfono:</h3>
+        </ion-text>
+        <ion-text color="dark ion-text-center">
+          <h3>-</h3>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text class="text-white ion-text-center">
+          <h3>Mi correo:</h3>
+        </ion-text>
+        <ion-text color="dark ion-text-center">
+          <h3>williams@gmail.com</h3>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -117,9 +117,6 @@ export class HomePage implements OnInit
 
   ngOnInit() { }
 
-  viewDevociones( )
-  {
-    this.router.navigateByUrl( '/devociones' );
-  }
+  
 
 }
