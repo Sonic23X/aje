@@ -9,7 +9,7 @@
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon name="{{ p.icon }}"> </ion-icon>
+              <ion-icon style="color:white; margin-right: 25px;" name="{{ p.icon }}"> </ion-icon>
               <ion-label> {{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>

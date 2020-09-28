@@ -1,9 +1,572 @@
-<ion-header>
+<ion-header [translucent]="false">
   <ion-toolbar>
-    <ion-title>formulario</ion-title>
+    <ion-buttons slot="start" class="text-white">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../assets/images/logos/white/logo 2.svg" alt="">
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-grid>
 
+    <ion-row>
+      <ion-col>
+        <ion-text class="text-white ion-text-center">
+          <h3>Instrucciones</h3>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text class="text-white ion-text-center">
+          <span>Por cada número selecciona <b>SOLO UNA</b> respuesta, y que sea aquella con la que te identifiques mejor. Al final cuenta el número de incisos de cada uno. Con el inciso que tengas más respuestas puedes ver tu resultado al final.</span>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                1) La cosa por la que me siento más atacado es
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              No poder rendir mis finanzas a Dios y cosas atractivas del mundo
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              Dudas constantes
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              Personas que critican mi fe y algunas pruebas
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Falta de consistencia que me impide dar mejor fruto para Dios
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                2) La frase que mejor describe ahora es
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Quiero ver todo lo que el cristianismo representa
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Quiero entender a profundidad las cosas espirituales
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Quiero practicar todo aquello que he aprendido
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Quiero oír todo el mensaje de Dios
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                3) Me encuentro en la siguiente etapa
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Soy bautizado y debo compartir lo que se con algún nuevo
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Ya puedo dirigir un grupo pequeño
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Acepté a Cristo como mi salvador y mi meta es bautizarme
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              He hecho todo lo anterior y ahora también debo liderar
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                4) En este momento lo que más necesito es
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Desarrollar mi liderazgo en el reino
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Afianzarme en la fe para no volver atrás
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Comprender mejor el corazón de mis líderes para servir a su lado
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Subir mi nivel de compromiso para crecer en Dios
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                5) En este momento en mi vida esta frase me define mejor
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Anhelo la provisión oportuna de Dios
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Administro los abundantes recursos del Padre
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Busco la recompensa del Padre pues le sirvo con amor
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Quiero oportunidades para hacer negocios con Dios
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                6) Esta frase me describe mejor en este momento
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Anhelo agradarle a través del servicio
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Disfruto de su presencia al relacionarme con otros
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Estoy expectante de sus bendiciones
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Me gozo por estar a su lado
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                7) Mi mayor preocupación en mi vida de fe es
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              No tener la convicción para continuar
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Que me falte compromiso para persistir
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              No tener la autoridad para cumplir mi misión
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Que no logre ser fiel a mis líderes
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                8) En este momento mi meta es
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Bautizarme
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Enseñar a un nuevo
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Poder guiar a un grupo
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Ser líder en mi Iglesia
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                9) Cuando llego al templo lo más impactante para mí es
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              El mensaje que escucho
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Ciertas revelaciones especiales
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Todo lo que veo
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Lo que puedo hacer por alguien
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                10) Diezmo
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Regularmente
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Siempre
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Nunca
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Ocasionalmente
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                11) Sirvo
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Regularmente
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Casi nunca
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Ocasionalmente
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Siempre
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                12) Tengo luchas constantes con
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              La certeza de mi fe
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Poder consagrar mi tiempo y dinero
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              La presión social por ser cristiano
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Vivir en plenitud constante a su lado
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                13) Mi objetivo en esta etapa de mi vida cristiana es
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Desarrollarme en el conocimiento de la Palabra
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Afianzar mi fe para no volver atrás
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Servir a alguien
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Mantenerme en plenitud con Dios
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-radio-group value="grape">
+          <ion-list-header>
+            <ion-label class="question">
+              <b>
+                14) Mi mayor felicidad en este momento es
+              </b>
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label class="answer">
+              Identificarme con Dios y su iglesia
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="a" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Conectarme a profundidad con Dios
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="c" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Honrarle con cada parte de mi vida
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="d" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label class="answer">
+              Poder obedecer lo que me pidan
+            </ion-label>
+            <ion-radio slot="start" color="primary" value="b" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>

@@ -107,9 +107,14 @@ export class HomePage implements OnInit
       text: 'Conóce día con día lo que Dios quiere hablar a tu vida'
     },
     {
-      background: '../assets/images/home/cards/dia3.jpg',
-      title: 'Devocionales',
-      text: 'Conóce día con día lo que Dios quiere hablar a tu vida'
+      background: '../assets/images/home/cards/contenido.jpg',
+      title: 'Contenido',
+      text: 'Encuentra el material necesario para tu crecimiento'
+    },
+    {
+      background: '../assets/images/home/cards/testimonios.jpg',
+      title: 'Testimonios',
+      text: 'Descubre los testimonios de algunos hermanos'
     }
   ];
 

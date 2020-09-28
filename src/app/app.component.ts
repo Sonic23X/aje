@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Test',
-      url: '/test',
+      url: '/formulario',
       icon: 'clipboard-outline'
     },
     {
