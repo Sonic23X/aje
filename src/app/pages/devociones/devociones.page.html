@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="text-white">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../assets/images/logos/white/logo 2.svg" alt="">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let d of devociones;" style="background-image: url( {{ d.image }} )">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="title">
+            <p class="text-white">{{ d.text }}</p>
+          </ion-col>
+          <ion-col class="more">
+            <ion-router-link class="hyper-color" href="#">Leer</ion-router-link>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

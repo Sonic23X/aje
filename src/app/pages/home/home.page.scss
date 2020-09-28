@@ -1,0 +1,60 @@
+
+/* Las variables scss utilizadas estan en global.scss  */
+
+ion-slides
+{
+  width: 100%;
+  border-radius: 25px;
+}
+
+.card-carrusel
+{
+  background-size: cover;
+  padding: 20% 50% 20% 50%
+}
+
+.text-white
+{
+  color: var( --text-white ) !important;
+}
+
+.hyper-color
+{
+  color: var( --hyper-color );
+}
+
+.f-11
+{
+  font-size: 11px;
+}
+
+.f-24
+{
+  font-size: 24px;
+}
+
+.card-home
+{
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
+  border-radius: 25px;
+}
+
+.content-card
+{
+  margin-top: 180px;
+  margin-left: 20px;
+}
+
+ion-title img
+{
+  width: 10%;
+}
+
+ion-title.md img
+{
+  width: 10%;
+  margin-left: 35%;
+}

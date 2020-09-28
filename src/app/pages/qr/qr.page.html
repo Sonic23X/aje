@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="text-white">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="md">
+      <img src="../assets/images/logos/white/logo 2.svg" alt="">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          Escanear código QR
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <ion-icon class="img-qr" name="qr-code-outline"></ion-icon>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-justify">
+          Al Estilo de Jesús es un MODELO de discipulado obtenido de los evangelios,
+          directamente del ejemplo de nuestro señor, es por eso que hemos puesto los
+          mejores recursos actuales y necesarios para que tengas una completa
+          inmersión en el programa.
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-justify">
+          Para disfrutar de todo el contenido solo es necesario escanear el código QR
+          que se encuentra en tu kit del programa usando el botón de abajo.
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row-button">
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <ion-button color="success" (click)="startScan( )">
+           Escanear
+        </ion-button>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

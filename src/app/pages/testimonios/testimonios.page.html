@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="text-white">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../assets/images/logos/white/logo 2.svg" alt="">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let t of testimonios;">
+    <img src="{{ t.image }}" class="testimonios-img" />
+    <ion-card-content>
+      <div class="content-card">
+        <ion-card-title class="f-24">{{ t.title }}</ion-card-title>
+        <p class="text-white">{{ t.text }}</p>
+        <ion-router-link class="hyper-color" href="#">Ver más</ion-router-link>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

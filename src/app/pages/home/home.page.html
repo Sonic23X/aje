@@ -1,0 +1,60 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="text-white">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../assets/images/logos/white/logo 2.svg" alt="">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+
+    <!-- Slider de imagenes -->
+    <ion-row>
+      <ion-col>
+        <ion-slides pager="true" [options]="slideOpts">
+          <ion-slide *ngFor="let s of sliders;">
+            <img src="{{ s.src }}" alt="{{ s.name }}">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <!-- Texto plano -->
+    <ion-row>
+      <ion-col>
+        <ion-text class="text-white">
+          <h4>Al estilo de Jesús es un modelo de discipulado obtenido de los evangelios.</h4>
+          <p class="text-white f-11">
+            Aprenderás el proceso  que llevó al Maestro para reproducirse en sus discípulos
+            para así aplicarlo y entenderlo de manera eficaz. <ion-router-link class="hyper-color" href="#">Leer más</ion-router-link>
+          </p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <!-- Tarjetas de acceso -->
+    <ion-row>
+      <ion-col>
+        <ion-slides [options]="cardsOpts">
+          <ion-slide *ngFor="let c of cards;">
+            <ion-card class="card-home" style="background-image: url( {{ c.background }} )">
+              <ion-card-header></ion-card-header>
+              <ion-card-content></ion-card-content>
+              <ion-footer>
+                <div class="content-card">
+                  <ion-card-title class="f-24">{{ c.title }}</ion-card-title>
+                  <p class="text-white">{{ c.text }}</p>
+                  <ion-router-link class="hyper-color" href="#">Ver todos -></ion-router-link>
+                </div>
+              </ion-footer>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
