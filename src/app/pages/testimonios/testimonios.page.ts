@@ -15,20 +15,20 @@ export class TestimoniosPage implements OnInit {
   testimonios =
   [
     {
-      image: '../assets/images/testimonios/testimonio_1.png',
-      title: 'Testimonio 1',
+      image: '../assets/images/testimonios/testimonio_1.jpg',
+      title: 'Daniel Vega',
     },
     {
-      image: '../assets/images/testimonios/testimonio_2.png',
-      title: 'Testimonio 2',
+      image: '../assets/images/testimonios/testimonio_2.jpg',
+      title: 'Pastor Saúl Nava',
     },
     {
-      image: '../assets/images/testimonios/testimonio_3.png',
-      title: 'Testimonio 3',
+      image: '../assets/images/testimonios/testimonio_3.jpg',
+      title: 'Steffy de Acosta',
     },
     {
-      image: '../assets/images/testimonios/testimonio_4.png',
-      title: 'Testimonio 4',
+      image: '../assets/images/testimonios/testimonio_4.jpg',
+      title: 'Yarem Medina',
     },
   ];
 

@@ -9,13 +9,14 @@ import { ContenidosPageRoutingModule } from './contenidos-routing.module';
 import { ContenidosPage } from './contenidos.page';
 import { ComponentsModule } from '../../components/components.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     ContenidosPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   declarations: [ContenidosPage]
 })

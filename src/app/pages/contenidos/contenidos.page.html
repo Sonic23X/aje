@@ -20,9 +20,11 @@
             <ion-grid class="grid-cards">
               <ion-row>
                 <ion-col class="title" size="7">
+                  <p class="text-white">{{ c.title }}</p>
+                  <p class="text-white">Al Estilo de Jesús</p>
                 </ion-col>
                 <ion-col class="more">
-                  <ion-router-link class="hyper-color f-19" href="#">Leer</ion-router-link>
+                  <ion-router-link class="hyper-color f-19" (click)="showInfo( c.number )">Leer</ion-router-link>
                 </ion-col>
               </ion-row>
             </ion-grid>

@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="text-white">
+      <ion-button ion-button (click)="dismiss()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-text>Regresar</ion-text>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    
+    <!-- Slider de imagenes -->
+    <ion-row>
+      <ion-col>
+        <ion-slides pager="true" [options]="slideOpts" class="welcome-slider">
+          <ion-slide>
+            <img src="{{ devociones[ option ].image }}" alt="">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          <h5>{{ devociones[ option ].title }}</h5>
+        </ion-text>
+        <ion-text>
+          <h6>Día {{ devociones[ option ].day }}</h6>
+        </ion-text>
+        <ion-text>
+          <h6>{{ devociones[ option ].origin }}</h6>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div [innerHTML]="devocionBody[ 0 ]"></div>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>
