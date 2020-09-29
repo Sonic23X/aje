@@ -94,7 +94,7 @@ export class HomePage implements OnInit
   sliders =
   [
     {
-      src: '../assets/images/home/carousel/start.png',
+      src: '../assets/images/home/cards/AEJ-inicio.png',
       name: 'promocion_1'
     }
   ];

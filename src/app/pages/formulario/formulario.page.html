@@ -30,7 +30,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 1)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -68,7 +68,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 2)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -106,7 +106,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 3)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -144,7 +144,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 4)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -182,7 +182,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 5)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -220,7 +220,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 6)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -258,7 +258,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 7)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -296,7 +296,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 8)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -334,7 +334,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 9)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -372,7 +372,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 10)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -410,7 +410,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 11)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -448,7 +448,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 12)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -486,7 +486,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 13)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -524,7 +524,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-radio-group value="grape">
+        <ion-radio-group (ionChange)='radioGroupChange($event, 14)'>
           <ion-list-header>
             <ion-label class="question">
               <b>
@@ -560,10 +560,12 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row class="row-button">
       <ion-col></ion-col>
       <ion-col>
-        
+        <ion-button class="btn-aje-selected" (click)="evaluar( )">
+          Evaluar
+        </ion-button>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
