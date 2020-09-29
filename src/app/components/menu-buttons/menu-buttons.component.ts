@@ -1,52 +1,63 @@
-import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Input  } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { SelectButtonService } from '../../services/select-button.service';
 
 @Component({
   selector: 'app-menu-buttons',
   templateUrl: './menu-buttons.component.html',
   styleUrls: ['./menu-buttons.component.scss'],
 })
-export class MenuButtonsComponent implements OnInit {
+export class MenuButtonsComponent implements OnInit, AfterViewInit {
 
   @ViewChild( 'start' ) buttonInicio: ElementRef;
   @ViewChild( 'devocion' ) buttonDevocion: ElementRef;
   @ViewChild( 'contenido' ) buttonContenido: ElementRef;
   @ViewChild( 'testimonios' ) buttonTestimonio: ElementRef;
 
-  actualView = 'inicio';
+  actualView: String = '';
 
-  constructor() { }
+  constructor( private navCtrl: NavController, private selectButton: SelectButtonService, ) 
+  { }
 
   ngOnInit() {}
+
+  ngAfterViewInit( )
+  {
+    this.actualView = this.selectButton.getBoton( );
+
+    let inicio: HTMLDivElement = this.buttonInicio.nativeElement;
+    let devocion: HTMLDivElement = this.buttonDevocion.nativeElement;
+    let contenido: HTMLDivElement = this.buttonContenido.nativeElement;
+    let testimonio: HTMLDivElement = this.buttonTestimonio.nativeElement;
+
+    switch ( this.actualView )
+    {
+      case 'inicio':
+        inicio.classList.remove( 'btn-aje' );
+        inicio.classList.add( 'btn-aje-selected' );
+        break;
+      case 'devocion':
+        devocion.classList.remove( 'btn-aje' );
+        devocion.classList.add( 'btn-aje-selected' );
+        break;
+      case 'contenido':
+        contenido.classList.remove( 'btn-aje' );
+        contenido.classList.add( 'btn-aje-selected' );
+        break;
+      case 'testimonios':
+        testimonio.classList.remove( 'btn-aje' );
+        testimonio.classList.add( 'btn-aje-selected' );
+        break;
+    }
+        
+  }
 
   startClick( )
   {
     if ( this.actualView != 'inicio' )
     {
-      let inicio: HTMLDivElement = this.buttonInicio.nativeElement;
-      let devocion: HTMLDivElement = this.buttonDevocion.nativeElement;
-      let contenido: HTMLDivElement = this.buttonContenido.nativeElement;
-      let testimonio: HTMLDivElement = this.buttonTestimonio.nativeElement;
-
-      switch ( this.actualView )
-      {
-        case 'devocion':
-          devocion.classList.remove( 'btn-aje-selected' );
-          devocion.classList.add( 'btn-aje' );
-          break;
-        case 'contenido':
-          contenido.classList.remove( 'btn-aje-selected' );
-          contenido.classList.add( 'btn-aje' );
-          break;
-        case 'testimonio':
-          testimonio.classList.remove( 'btn-aje-selected' );
-          testimonio.classList.add( 'btn-aje' );
-          break;
-      }
-      
-      inicio.classList.remove( 'btn-aje' );
-      inicio.classList.add( 'btn-aje-selected' );
-
-      this.actualView = 'inicio';
+      this.selectButton.setBoton( 'inicio' );
+      this.navCtrl.navigateRoot('/home');
     }
   }
   
@@ -54,31 +65,8 @@ export class MenuButtonsComponent implements OnInit {
   {
     if ( this.actualView != 'devocion' )
     {
-      let inicio: HTMLDivElement = this.buttonInicio.nativeElement;
-      let devocion: HTMLDivElement = this.buttonDevocion.nativeElement;
-      let contenido: HTMLDivElement = this.buttonContenido.nativeElement;
-      let testimonio: HTMLDivElement = this.buttonTestimonio.nativeElement;
-
-      switch ( this.actualView )
-      {
-        case 'inicio':
-          inicio.classList.remove( 'btn-aje-selected' );
-          inicio.classList.add( 'btn-aje' );
-          break;
-        case 'contenido':
-          contenido.classList.remove( 'btn-aje-selected' );
-          contenido.classList.add( 'btn-aje' );
-          break;
-        case 'testimonio':
-          testimonio.classList.remove( 'btn-aje-selected' );
-          testimonio.classList.add( 'btn-aje' );
-          break;
-      }
-      
-      devocion.classList.remove( 'btn-aje' );
-      devocion.classList.add( 'btn-aje-selected' );
-
-      this.actualView = 'devocion';
+      this.selectButton.setBoton( 'devocion' );
+      this.navCtrl.navigateRoot('/devociones');
     }
   }
 
@@ -86,63 +74,17 @@ export class MenuButtonsComponent implements OnInit {
   {
     if ( this.actualView != 'contenido' )
     {
-      let inicio: HTMLDivElement = this.buttonInicio.nativeElement;
-      let devocion: HTMLDivElement = this.buttonDevocion.nativeElement;
-      let contenido: HTMLDivElement = this.buttonContenido.nativeElement;
-      let testimonio: HTMLDivElement = this.buttonTestimonio.nativeElement;
-
-      switch ( this.actualView )
-      {
-        case 'inicio':
-          inicio.classList.remove( 'btn-aje-selected' );
-          inicio.classList.add( 'btn-aje' );
-          break;
-        case 'devocion':
-          devocion.classList.remove( 'btn-aje-selected' );
-          devocion.classList.add( 'btn-aje' );
-          break;
-        case 'testimonio':
-          testimonio.classList.remove( 'btn-aje-selected' );
-          testimonio.classList.add( 'btn-aje' );
-          break;
-      }
-      
-      contenido.classList.remove( 'btn-aje' );
-      contenido.classList.add( 'btn-aje-selected' );
-
-      this.actualView = 'contenido';
+      this.selectButton.setBoton( 'contenido' );
+      this.navCtrl.navigateRoot('/contenidos');
     }
   }
 
   testClick( )
   {
-    if ( this.actualView != 'testimonio' )
+    if ( this.actualView != 'testimonios' )
     {
-      let inicio: HTMLDivElement = this.buttonInicio.nativeElement;
-      let devocion: HTMLDivElement = this.buttonDevocion.nativeElement;
-      let contenido: HTMLDivElement = this.buttonContenido.nativeElement;
-      let testimonio: HTMLDivElement = this.buttonTestimonio.nativeElement;
-
-      switch ( this.actualView )
-      {
-        case 'inicio':
-          inicio.classList.remove( 'btn-aje-selected' );
-          inicio.classList.add( 'btn-aje' );
-          break;
-        case 'devocion':
-          devocion.classList.remove( 'btn-aje-selected' );
-          devocion.classList.add( 'btn-aje' );
-          break;
-        case 'contenido':
-          contenido.classList.remove( 'btn-aje-selected' );
-          contenido.classList.add( 'btn-aje' );
-          break;
-      }
-      
-      testimonio.classList.remove( 'btn-aje' );
-      testimonio.classList.add( 'btn-aje-selected' );
-
-      this.actualView = 'testimonio';
+      this.selectButton.setBoton( 'testimonios' );
+      this.navCtrl.navigateRoot('/testimonios');
     }
   }
 

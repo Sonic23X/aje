@@ -10,28 +10,27 @@
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+    <app-menu-buttons></app-menu-buttons>
 
-  <div class="buttons-group">
-    <div class="row-fluid">
-      <button type="button" class="btn-aje">Inicio</button>
-      <button type="button" class="btn-aje-selected" (click)="viewDevociones( )">Devocionales</button>
-      <button type="button" class="btn-aje">Contenido</button>
-      <button type="button" class="btn-aje">Testimonios</button>
-    </div>
-  </div>
+    <ion-row *ngFor="let d of devociones;" >
+      <ion-col>
+        <ion-card class="fondo" style="background-image: url( {{ d.image }} )">
+          <ion-card-content>
+            <ion-grid class="grid-cards">
+              <ion-row>
+                <ion-col class="title" size="7">
+                  <p class="text-white">{{ d.text }}</p>
+                </ion-col>
+                <ion-col class="more">
+                  <ion-router-link class="hyper-color f-19" href="#">Leer</ion-router-link>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-  <ion-card *ngFor="let d of devociones;" style="background-image: url( {{ d.image }} )">
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col class="title">
-            <p class="text-white">{{ d.text }}</p>
-          </ion-col>
-          <ion-col class="more">
-            <ion-router-link class="hyper-color" href="#">Leer</ion-router-link>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+  </ion-grid>
 </ion-content>

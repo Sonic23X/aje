@@ -17,7 +17,7 @@
     <!-- Slider de imagenes -->
     <ion-row>
       <ion-col>
-        <ion-slides pager="true" [options]="slideOpts">
+        <ion-slides pager="true" [options]="slideOpts" class="welcome-slider">
           <ion-slide *ngFor="let s of sliders;">
             <img src="{{ s.src }}" alt="{{ s.name }}">
           </ion-slide>
@@ -58,5 +58,6 @@
         </ion-slides>
       </ion-col>
     </ion-row>
+    
   </ion-grid>
 </ion-content>

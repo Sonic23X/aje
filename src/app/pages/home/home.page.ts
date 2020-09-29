@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 
 @Component({
@@ -89,6 +88,11 @@ export class HomePage implements OnInit
     spaceBetween: 10,
   };
 
+  homeOpts =
+  {
+    slidesPerView: 1,
+  };
+
   //variable que contiene los sliders que se muestran
   //en el carrusel
   sliders =
@@ -118,7 +122,7 @@ export class HomePage implements OnInit
     }
   ];
 
-  constructor( private router: Router ) { }
+  constructor( ) { }
 
   ngOnInit() { }
 

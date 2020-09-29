@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DevocionesPageRoutingModule } from './devociones-routing.module';
+import { ContenidosPageRoutingModule } from './contenidos-routing.module';
 
-import { DevocionesPage } from './devociones.page';
+import { ContenidosPage } from './contenidos.page';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    DevocionesPageRoutingModule,
+    ContenidosPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [DevocionesPage]
+  declarations: [ContenidosPage]
 })
-export class DevocionesPageModule {}
+export class ContenidosPageModule {}
