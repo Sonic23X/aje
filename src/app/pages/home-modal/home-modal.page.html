@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="text-white">
+      <ion-button ion-button (click)="dismiss()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-text>Regresar</ion-text>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-slides pager="false" [options]="slideOpts" class="welcome-slider">
+          <ion-slide>
+            <img src="../assets/images/contenido/contenido_1.jpg" alt="">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div [innerHTML]="content"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

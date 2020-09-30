@@ -32,7 +32,7 @@
           <h4>Al estilo de Jesús es un modelo de discipulado obtenido de los evangelios.</h4>
           <p class="text-white f-11">
             Aprenderás el proceso  que llevó al Maestro para reproducirse en sus discípulos
-            para así aplicarlo y entenderlo de manera eficaz. <ion-router-link class="hyper-color" href="#">Leer más</ion-router-link>
+            para así aplicarlo y entenderlo de manera eficaz. <ion-router-link class="hyper-color" (click)="showModal( )">Leer más</ion-router-link>
           </p>
         </ion-text>
       </ion-col>
@@ -50,7 +50,7 @@
                 <div class="content-card">
                   <ion-card-title class="f-24">{{ c.title }}</ion-card-title>
                   <p class="text-white">{{ c.text }}</p>
-                  <ion-router-link class="hyper-color" href="#">Ver todos -></ion-router-link>
+                  <ion-router-link class="hyper-color" (click)="loadView( c.vista )">Ver todos -></ion-router-link>
                 </div>
               </ion-footer>
             </ion-card>

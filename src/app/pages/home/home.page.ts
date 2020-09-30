@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController, NavController } from '@ionic/angular';
+import { SelectButtonService } from '../../services/select-button.service';
+import { HomeModalPage } from '../home-modal/home-modal.page';
 
 
 @Component({
@@ -108,24 +111,55 @@ export class HomePage implements OnInit
     {
       background: '../assets/images/home/cards/dia1.jpg',
       title: 'Devocionales',
-      text: 'Conóce día con día lo que Dios quiere hablar a tu vida'
+      text: 'Conóce día con día lo que Dios quiere hablar a tu vida',
+      vista: 'devocion',
     },
     {
       background: '../assets/images/home/cards/contenido.jpg',
       title: 'Contenido',
-      text: 'Encuentra el material necesario para tu crecimiento'
+      text: 'Encuentra el material necesario para tu crecimiento',
+      vista: 'contenido',
     },
     {
       background: '../assets/images/home/cards/testimonios.jpg',
       title: 'Testimonios',
-      text: 'Descubre los testimonios de algunos hermanos'
+      text: 'Descubre los testimonios de algunos hermanos',
+      vista: 'testimonios',
     }
   ];
 
-  constructor( ) { }
+  constructor( private selectButton: SelectButtonService, 
+               private navCtrl: NavController,
+               private modalCtrl: ModalController ) 
+  { }
 
   ngOnInit() { }
 
-  
+  loadView( vista: String )
+  {
+    switch ( vista )
+    {
+      case 'devocion':
+        this.selectButton.setBoton( 'devocion' );
+        this.navCtrl.navigateRoot('/devociones');
+        break;
+      case 'contenido':
+        this.selectButton.setBoton( 'contenido' );
+        this.navCtrl.navigateRoot('/contenidos');
+        break;
+      case 'testimonios':
+        this.selectButton.setBoton( 'testimonios' );
+        this.navCtrl.navigateRoot('/testimonios');
+        break;
+    }
+  }
+
+  async showModal( )
+  {
+    const modal = await this.modalCtrl.create({
+      component: HomeModalPage,
+    });
+    return await modal.present();
+  }
 
 }

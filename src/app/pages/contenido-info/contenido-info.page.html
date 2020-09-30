@@ -10,20 +10,22 @@
 </ion-header>
 
 <ion-content>
-  <!-- Slider de imagenes -->
-  <ion-row>
-    <ion-col>
-      <ion-slides pager="false" [options]="slideOpts" class="welcome-slider">
-        <ion-slide>
-          <img src="{{ imagenes[ option ] }}" alt="">
-        </ion-slide>
-      </ion-slides>
-    </ion-col>
-  </ion-row>
+  <ion-grid>
+    <!-- Slider de imagenes -->
+    <ion-row>
+      <ion-col>
+        <ion-slides pager="false" [options]="slideOpts" class="welcome-slider">
+          <ion-slide>
+            <img src="{{ imagenes[ option ] }}" alt="">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
 
-  <ion-row>
-    <ion-col>
-      <div [innerHTML]="contenidos[ option ]"></div>
-    </ion-col>
-  </ion-row>
+    <ion-row>
+      <ion-col>
+        <div [innerHTML]="contenidos[ option ]"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

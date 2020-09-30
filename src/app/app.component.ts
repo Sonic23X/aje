@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-root',
@@ -10,39 +11,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public selectedIndex = 0;
-  public appPages = [
-    {
-      title: 'Inicio',
-      url: '/home',
-      icon: 'home-outline'
-    },
-    {
-      title: 'Test',
-      url: '/formulario',
-      icon: 'clipboard-outline'
-    },
-    {
-      title: 'Escanear QR',
-      url: '/qr',
-      icon: 'qr-code'
-    },
-    {
-      title: 'Perfil',
-      url: '/perfil',
-      icon: 'person'
-    },
-    {
-      title: 'Salir',
-      url: '/exit',
-      icon: 'exit'
-    },
-  ];
-
+  
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private iab: InAppBrowser,
   ) {
     this.initializeApp();
   }
@@ -55,4 +29,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() { }
+
+  viewDocument() 
+  {
+    this.iab.create( 'http://aje.cludevs.com.mx/manual.pdf', '_system' );
+  }
 }

@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { Toast } from '@ionic-native/toast/ngx';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +27,8 @@ import { Toast } from '@ionic-native/toast/ngx';
     SplashScreen,
     BarcodeScanner,
     Toast,
+    InAppBrowser,
+    DocumentViewer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
