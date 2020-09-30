@@ -1,11 +1,11 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" type="overlay" [swipeGesture]="false">
       <ion-content>
         <ion-list id="inbox-list">
           <img src="../assets/images/logos/white/logo 1.svg" alt="">
-          <ion-list-header>Wiliam Salinas</ion-list-header>
-          <ion-note>test@aje.com</ion-note>
+          <ion-list-header>{{ userService.name }}</ion-list-header>
+          <ion-note>{{ userService.email }}</ion-note>
 
           <ion-menu-toggle auto-hide="false">
             <ion-item routerDirection="root" routerLink="/home" lines="none" detail="false">
@@ -28,7 +28,7 @@
               <ion-icon style="color:white; margin-right: 25px;" name="person"> </ion-icon>
               <ion-label>Perfil</ion-label>
             </ion-item>
-            <ion-item lines="none" detail="false">
+            <ion-item (click)="exit( )" lines="none" detail="false">
               <ion-icon style="color:white; margin-right: 25px;" name="exit"> </ion-icon>
               <ion-label>Salir</ion-label>
             </ion-item>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-modal',
@@ -8,7 +8,16 @@ import { ModalController } from '@ionic/angular';
 })
 export class HomeModalPage implements OnInit {
 
-  constructor( private modalCtrl: ModalController ) { }
+  constructor( 
+    private modalCtrl: ModalController,
+    private platform: Platform
+  )
+  { 
+    this.platform.backButton.subscribeWithPriority( 10, ( ) => 
+    {
+      this.dismiss( );
+    });
+  }
 
   content = 
   `<p class="text-center">

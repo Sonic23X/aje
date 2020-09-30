@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController, NavController } from '@ionic/angular';
+import { ModalController, NavController, Platform } from '@ionic/angular';
 import { SelectButtonService } from '../../services/select-button.service';
 import { HomeModalPage } from '../home-modal/home-modal.page';
 
@@ -128,10 +128,18 @@ export class HomePage implements OnInit
     }
   ];
 
-  constructor( private selectButton: SelectButtonService, 
-               private navCtrl: NavController,
-               private modalCtrl: ModalController ) 
-  { }
+  constructor( 
+    private selectButton: SelectButtonService, 
+    private navCtrl: NavController,
+    private modalCtrl: ModalController,
+    private platform: Platform,
+  ) 
+  { 
+    this.platform.backButton.subscribeWithPriority( 10, ( ) => 
+    {
+      navigator[ 'app' ].exitApp( );
+    });
+  }
 
   ngOnInit() { }
 

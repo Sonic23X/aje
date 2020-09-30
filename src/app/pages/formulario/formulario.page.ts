@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -24,7 +24,16 @@ export class FormularioPage implements OnInit {
   pregunta13: string = '';
   pregunta14: string = '';
 
-  constructor( private navCtrl: NavController ) { }
+  constructor( 
+    private navCtrl: NavController,
+    private platform: Platform,
+  ) 
+  {
+    this.platform.backButton.subscribeWithPriority( 10, ( ) => 
+    {
+      this.navCtrl.navigateRoot('/home');
+    });
+  }
 
   ngOnInit() {
   }

@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-grid>
 
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-img src="../assets/images/logos/white/logo 1.svg" class="image-login"></ion-img>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row class="login-button">
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-button (click)="loginGoogle( )" color="danger">
+          <ion-icon name="logo-google" style="margin-right: 15px;"></ion-icon>
+          Iniciar sesion
+        </ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -170,7 +170,16 @@ export class DevocionInfoPage implements OnInit
   };
 
 
-  constructor( private modalCtrl: ModalController, private platform: Platform ) { }
+  constructor( 
+    private modalCtrl: ModalController, 
+    private platform: Platform 
+  ) 
+  {
+    this.platform.backButton.subscribeWithPriority( 10, ( ) => 
+    {
+      this.dismiss( );
+    });
+  }
 
   ngOnInit() {
   }

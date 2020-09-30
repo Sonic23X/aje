@@ -1,29 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent implements OnInit {
-  
+export class AppComponent implements OnInit 
+{
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private iab: InAppBrowser,
-  ) {
-    this.initializeApp();
+    public userService: UserService,
+    private navCtrl: NavController,
+  ) 
+  {
+    this.initializeApp( );
   }
 
-  initializeApp() {
-      this.platform.ready().then(() => {
+  initializeApp() 
+  {
+    this.platform.ready().then(() => 
+    {
       this.statusBar.styleDefault();
+      if( this.userService.uid == '' )
+      {
+        console.log( 'asd' );
+        
+      }
       this.splashScreen.hide();
     });
   }
@@ -33,5 +45,10 @@ export class AppComponent implements OnInit {
   viewDocument() 
   {
     this.iab.create( 'http://aje.cludevs.com.mx/manual.pdf', '_system' );
+  }
+
+  exit( )
+  {
+    navigator['app'].exitApp();
   }
 }

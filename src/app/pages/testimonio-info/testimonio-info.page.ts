@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, Platform } from '@ionic/angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
@@ -39,7 +39,16 @@ export class TestimonioInfoPage implements OnInit {
     },
   ];
 
-  constructor( private modalCtrl: ModalController, private iab: InAppBrowser ) { }
+  constructor( 
+    private modalCtrl: ModalController, 
+    private iab: InAppBrowser,
+    private platform: Platform, ) 
+    { 
+      this.platform.backButton.subscribeWithPriority( 10, ( ) => 
+      {
+        this.dismiss( );
+      });
+    }
 
   ngOnInit() {
   }

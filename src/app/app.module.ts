@@ -13,6 +13,12 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { Toast } from '@ionic-native/toast/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { IonicStorageModule } from '@ionic/storage';
+
+import { firebaseConfig } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +26,10 @@ import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    IonicStorageModule.forRoot(),
   ],
   providers: [
     StatusBar,
@@ -29,6 +38,7 @@ import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
     Toast,
     InAppBrowser,
     DocumentViewer,
+    GooglePlus,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

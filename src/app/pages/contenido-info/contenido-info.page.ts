@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-contenido-info',
@@ -8,7 +8,16 @@ import { ModalController } from '@ionic/angular';
 })
 export class ContenidoInfoPage implements OnInit {
 
-  constructor( private modalCtrl: ModalController ) { }
+  constructor( 
+    private modalCtrl: ModalController,
+    private platform: Platform
+  ) 
+  {
+    this.platform.backButton.subscribeWithPriority( 10, ( ) => 
+    {
+      this.dismiss( );
+    });
+  }
 
   ngOnInit() {
   }

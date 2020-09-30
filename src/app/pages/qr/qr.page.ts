@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { Toast } from '@ionic-native/toast/ngx';
+import { NavController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-qr',
@@ -14,7 +15,15 @@ export class QrPage implements OnInit {
   constructor( 
     private barcodeScanner: BarcodeScanner,
     private toast: Toast,
-    ) { }
+    private platform: Platform,
+    private navCtrl: NavController,
+    ) 
+    { 
+      this.platform.backButton.subscribeWithPriority( 10, ( ) => 
+      {
+        this.navCtrl.navigateRoot('/home');
+      });
+    }
 
   ngOnInit() { }
 
