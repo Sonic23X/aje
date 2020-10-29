@@ -14,7 +14,7 @@ export class DevocionInfoPage implements OnInit
   devociones =
   [
     {
-      image: '../assets/images/devociones/dia1.jpg',
+      image: '../assets/images/devociones/devocional_1.jpg',
       title: 'Hacer discipulos, es el Gran Mandato de Jesús',
       day: 1,
       origin: 'Mateo 28:18-20',

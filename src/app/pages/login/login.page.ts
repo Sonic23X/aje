@@ -4,6 +4,9 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
+
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-login',
@@ -17,12 +20,23 @@ export class LoginPage implements OnInit {
     private platform: Platform, 
     private googlePlus: GooglePlus,
     private userService: UserService,
+    private route: Router,
+    private storage: Storage,
     private navCtrl: NavController,
   ) 
   { 
     this.platform.backButton.subscribeWithPriority( 10, () => 
     {
       navigator['app'].exitApp();
+    });   
+    
+    this.storage.get( 'name' ).then( value =>
+    {      
+      if ( value != null )
+      {
+        this.route.navigateByUrl( '/home' );
+      }
+
     });
   }
 

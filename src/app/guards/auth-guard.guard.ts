@@ -16,9 +16,7 @@ export class AuthGuardGuard
   { }
 
   canLoad( ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree
-  {
-    console.log( this.usuarioService.validateToken( ) );
-    
+  {    
     return this.usuarioService.validateToken( );
   }
 

@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { UserService } from './services/user.service';
 
+import { Storage } from '@ionic/storage';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -21,6 +23,7 @@ export class AppComponent implements OnInit
     private iab: InAppBrowser,
     public userService: UserService,
     private navCtrl: NavController,
+    private storage: Storage
   ) 
   {
     this.initializeApp( );
@@ -31,13 +34,10 @@ export class AppComponent implements OnInit
     this.platform.ready().then(() => 
     {
       this.statusBar.styleDefault();
-      if( this.userService.uid == '' )
-      {
-        console.log( 'asd' );
-        
-      }
       this.splashScreen.hide();
     });
+
+    
   }
 
   ngOnInit() { }

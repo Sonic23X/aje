@@ -14,7 +14,7 @@ export class UserService
   uid: String = '';
   isScanned: Boolean = false;
 
-  constructor( private storage: Storage, private navCtrl: NavController ) { this.loadUser( ); }
+  constructor( private storage: Storage, private navCtrl: NavController ) { this.loadUser( ); console.log( this.storage.get( 'name' ) ); }
 
   setUser( nombre: String, correo: String, uid: String, cel: String, foto: String )
   {
@@ -55,7 +55,7 @@ export class UserService
     const cel = await this.storage.get( 'phone' );
     const foto = await this.storage.get( 'picture' );
     const uid = await this.storage.get( 'uid' );
-    const scanner = await this.storage.get( 'scanner' );
+    const scanner = await this.storage.get( 'scanner' );        
 
     if ( foto )
       this.picture = foto;
@@ -75,15 +75,36 @@ export class UserService
   {
     return new Promise( resolve =>
     {
-      if ( this.uid != '' )
-      {
-        resolve( true );
-      }
-      else
-      {
-        this.navCtrl.navigateRoot('/login');
-        resolve( false );
-      }
+      this.storage.get( 'uid' ).then( value => 
+      {        
+        if ( value != '' )
+        {
+          resolve( true );
+        }
+        else
+        {
+          this.navCtrl.navigateRoot('/login');
+          resolve( false );
+        }
+      });
+    });
+  }
+
+  validateQR( ): Promise<boolean>
+  {
+    return new Promise( resolve => 
+    {
+      this.storage.get( 'scanner' ).then( value => 
+        {        
+          if ( value )
+          {
+            resolve( true );
+          }
+          else
+          {
+            resolve( false );
+          }
+        });
     });
   }
 
