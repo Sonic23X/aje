@@ -153,8 +153,14 @@
    */
 
   .ios body {
-    --ion-background-color: #000000;
-    --ion-background-color-rgb: 0,0,0;
+    --ion-background-color: rgba(0,0,0,1);
+    --ion-background-color: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --ion-background-color: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(0,72,105,1)));
+    --ion-background-color: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --ion-background-color: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --ion-background-color: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --ion-background-color: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#004869', GradientType=0 );
 
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255,255,255;
@@ -181,7 +187,7 @@
 
     --ion-toolbar-background: #0d0d0d;
 
-    --ion-item-background: #000000;
+    --ion-item-background: rgba(0, 0, 0, 0);
   }
 
 
@@ -191,8 +197,14 @@
    */
 
   .md body {
-    --ion-background-color: #121212;
-    --ion-background-color-rgb: 18,18,18;
+    --ion-background-color: rgba(0,0,0,1);
+    --ion-background-color: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --ion-background-color: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(0,72,105,1)));
+    --ion-background-color: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --ion-background-color: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --ion-background-color: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --ion-background-color: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,72,105,1) 100%);
+    --filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#004869', GradientType=0 );
 
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255,255,255;
@@ -219,7 +231,7 @@
     --ion-color-step-900: #e7e7e7;
     --ion-color-step-950: #f3f3f3;
 
-    --ion-item-background: #1e1e1e;
+    --ion-item-background: rgba(0, 0, 0, 0);
 
     --ion-toolbar-background: #1f1f1f;
 
@@ -228,8 +240,14 @@
 }
 
 body.dark {
-  --ion-background-color: #121212;
-  --ion-background-color-rgb: 18,18,18;
+  --ion-background-color: rgba(0,0,0,1);
+  --ion-background-color: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,50,71,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(0,50,71,1)));
+  --ion-background-color: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,50,71,1) 100%);
+  --ion-background-color: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,50,71,1) 100%);
+  --ion-background-color: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,50,71,1) 100%);
+  --ion-background-color: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,50,71,1) 100%);
+  --filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#004869', GradientType=0 );
 
   --ion-text-color: #ffffff;
   --ion-text-color-rgb: 255,255,255;
@@ -256,5 +274,5 @@ body.dark {
 
   --ion-toolbar-background: #121212;
 
-  --ion-item-background: #121212;
+  --ion-item-background: rgba(0, 0, 0, 0);
 }

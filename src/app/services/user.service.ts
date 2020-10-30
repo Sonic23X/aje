@@ -71,13 +71,15 @@ export class UserService
       this.isScanned = scanner;
   }
 
+  
+
   validateToken(): Promise<boolean>
   {
     return new Promise( resolve =>
     {
       this.storage.get( 'uid' ).then( value => 
-      {        
-        if ( value != '' )
+      {                
+        if ( value != '' && value != null )
         {
           resolve( true );
         }
@@ -95,16 +97,17 @@ export class UserService
     return new Promise( resolve => 
     {
       this.storage.get( 'scanner' ).then( value => 
-        {        
-          if ( value )
-          {
-            resolve( true );
-          }
-          else
-          {
-            resolve( false );
-          }
-        });
+      { 
+        if ( value == true && value != null )
+        {
+          resolve( true );
+        }
+        else
+        {
+          this.navCtrl.navigateRoot('/qr');
+          resolve( false );
+        }    
+      });
     });
   }
 

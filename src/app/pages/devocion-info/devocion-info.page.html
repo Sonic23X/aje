@@ -26,20 +26,20 @@
     <ion-row>
       <ion-col>
         <ion-text>
-          <h5>{{ devociones[ option ].title }}</h5>
+          <h2>{{ devociones[ option ].title }}</h2>
         </ion-text>
         <ion-text>
-          <h6>Día {{ devociones[ option ].day }}</h6>
+          <h4>Día {{ devociones[ option ].day }}</h4>
         </ion-text>
         <ion-text>
-          <h6>{{ devociones[ option ].origin }}</h6>
+          <h4>{{ devociones[ option ].origin }}</h4>
         </ion-text>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <div [innerHTML]="devocionBody[ option ]"></div>
+        <div class="devocion-margin" [innerHTML]="devocionBody[ option ]"></div>
       </ion-col>
     </ion-row>
     

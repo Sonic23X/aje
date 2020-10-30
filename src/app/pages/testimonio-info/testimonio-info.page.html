@@ -24,14 +24,14 @@
     <ion-row>
       <ion-col>
         <ion-text>
-          <h5>Testimonio de {{ testimonios[ option ].title }}</h5>
+          <h3>Testimonio de {{ testimonios[ option ].title }}</h3>
         </ion-text>    
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <div [innerHTML]="testimonios[ option ].text"></div>
+        <div class="content-testimonios" [innerHTML]="testimonios[ option ].text"></div>
       </ion-col>
     </ion-row>
 

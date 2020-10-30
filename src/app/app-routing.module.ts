@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
+import { QrGuard } from './guards/qr.guard';
 
 const routes: Routes = [
   {
@@ -25,17 +26,17 @@ const routes: Routes = [
   {
     path: 'testimonios',
     loadChildren: () => import('./pages/testimonios/testimonios.module').then( m => m.TestimoniosPageModule),
-    canLoad: [ AuthGuardGuard ]
+    canLoad: [ QrGuard ]
   },
   {
     path: 'devociones',
     loadChildren: () => import('./pages/devociones/devociones.module').then( m => m.DevocionesPageModule),
-    canLoad: [ AuthGuardGuard ]
+    canLoad: [ QrGuard ]
   },
   {
     path: 'formulario',
     loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule),
-    canLoad: [ AuthGuardGuard ]
+    canLoad: [ QrGuard ]
   },
   {
     path: 'perfil',
@@ -45,7 +46,7 @@ const routes: Routes = [
   {
     path: 'contenidos',
     loadChildren: () => import('./pages/contenidos/contenidos.module').then( m => m.ContenidosPageModule),
-    canLoad: [ AuthGuardGuard ]
+    canLoad: [ QrGuard ]
   }
 ];
 

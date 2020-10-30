@@ -63,20 +63,37 @@ export class LoginPage implements OnInit {
 
   async loginAndroid ( )
   {
-    const res = await this.googlePlus.login(
+    try 
     {
-      'webClientId': '168208378923-81n8arpvm0u1fhkmklh6qm7mbcqmf5ns.apps.googleusercontent.com',
-      'offline': true
-    });
-    const resConfirmed = await this.afAuth.signInWithCredential( firebase.auth.GoogleAuthProvider.credential( res.idToken ) );
-    const user = resConfirmed.user;
-    this.userService.setUser( user.displayName, user.email, user.uid, user.phoneNumber, user.photoURL );
-    this.navCtrl.navigateRoot('/home');
+      const res = await this.googlePlus.login(
+      {
+        'webClientId': '168208378923-81n8arpvm0u1fhkmklh6qm7mbcqmf5ns.apps.googleusercontent.com',
+        'offline': true
+      });    
+  
+      const resConfirmed = await this.afAuth.signInWithCredential( firebase.auth.GoogleAuthProvider.credential( res.idToken ) );
+      const user = resConfirmed.user;
+      this.userService.setUser( user.displayName, user.email, user.uid, user.phoneNumber, user.photoURL );
+      this.navCtrl.navigateRoot('/home');
+    } 
+    catch (error) 
+    {
+      console.log( error );
+    }
   }
 
-  loginIOS( )
+  async loginIOS( )
   {
-
+      const res = await this.googlePlus.login(
+      {
+        'webClientId': '168208378923-81n8arpvm0u1fhkmklh6qm7mbcqmf5ns.apps.googleusercontent.com',
+        'offline': true
+      });    
+  
+      const resConfirmed = await this.afAuth.signInWithCredential( firebase.auth.GoogleAuthProvider.credential( res.idToken ) );
+      const user = resConfirmed.user;
+      this.userService.setUser( user.displayName, user.email, user.uid, user.phoneNumber, user.photoURL );
+      this.navCtrl.navigateRoot('/home');
   }
 
   async loginWeb( )

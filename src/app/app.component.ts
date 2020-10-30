@@ -44,7 +44,14 @@ export class AppComponent implements OnInit
 
   viewDocument() 
   {
-    this.iab.create( 'http://aje.cludevs.com.mx/manual.pdf', '_system' );
+    if( this.userService.isScanned )
+    {
+      this.iab.create( 'http://aje.cludevs.com.mx/manual.pdf', '_system' );
+    }
+    else
+    {
+      this.navCtrl.navigateRoot('/qr');
+    }
   }
 
   exit( )

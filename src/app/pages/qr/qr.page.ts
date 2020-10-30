@@ -3,6 +3,9 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { Toast } from '@ionic-native/toast/ngx';
 import { NavController, Platform } from '@ionic/angular';
 
+import { SelectButtonService } from '../../services/select-button.service';
+import { UserService } from '../../services/user.service';
+
 @Component({
   selector: 'app-qr',
   templateUrl: './qr.page.html',
@@ -17,10 +20,18 @@ export class QrPage implements OnInit {
     private toast: Toast,
     private platform: Platform,
     private navCtrl: NavController,
+    private selectButtonService: SelectButtonService,
+    private userService: UserService,
     ) 
     { 
+      if( this.userService.isScanned )
+        this.showButton = false;
+      else
+        this.showButton = true;
+
       this.platform.backButton.subscribeWithPriority( 10, ( ) => 
       {
+        this.selectButtonService.setBoton( 'inicio' );
         this.navCtrl.navigateRoot('/home');
       });
     }
@@ -33,6 +44,9 @@ export class QrPage implements OnInit {
     {
       if( barcodeData.text == 'AEJ20200001' )
       {
+        this.userService.setScan( true );
+        this.selectButtonService.setBoton( 'inicio' );
+        this.navCtrl.navigateRoot('/home');
         this.toast.show( `QR Válido`, '5000', 'bottom' ).subscribe( toast => { } );
         this.showButton = false;
       }
