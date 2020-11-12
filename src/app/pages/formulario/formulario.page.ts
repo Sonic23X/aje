@@ -337,27 +337,53 @@ export class FormularioPage implements OnInit {
       Swal.fire(
       {
         title: 'Tu nivel es CONOCIDO',
-        text: 'Has hecho un contacto inicial con la Iglesia, y te caracteriza el interés, aunque aún no desarrollas un compromiso más grande. <br>Te mueves principalmente en el sentido de la vista y para ti las impresiones son importantes. Estás en la etapa de desarrollar empatía. <br>Te recomendamos que te bautices pronto si aún no lo haces y que busques rápidamente a alguien que te acompañe en tu crecimiento y pronto te bautices.'
+        html: 'Has hecho un contacto inicial con la Iglesia, y te caracteriza el interés, aunque aún no desarrollas un compromiso más grande. <br>Te mueves principalmente en el sentido de la vista y para ti las impresiones son importantes. Estás en la etapa de desarrollar empatía. <br>Te recomendamos que te bautices pronto si aún no lo haces y que busques rápidamente a alguien que te acompañe en tu crecimiento y pronto te bautices.'
+      })
+      .then( ( result ) => 
+      {  
+        if ( result.isConfirmed ) 
+        {
+          this.navCtrl.navigateRoot( '/home' );
+        }
       });
     
     if ( b > a && b > c && b > d )
       Swal.fire({
         title: 'Tu nivel es SIERVO',
-        text: 'Ya has puesto tu fe en Cristo, te bautizaste y te uniste a una Iglesia local. Estás echando raíces y quizá sirves como voluntario en algún ministerio.<br> Estás desarrollando la mentalidad correcta y subiendo tu nivel de compromiso.<br> Te mueves principalmente por lo que escuchas y por lo que tu meta es seguir instrucciones para tu crecimiento.<br>Te recomendamos que sigas de cerca a un hermano mayor, y resistas la presión de críticas, burlas y problemas que te puedan hacer frente. Debes afirmar tu comunión con Dios de manera disciplinada con la lectura de la Biblia y la oración. Desarrolla obediencia',
+        html: 'Ya has puesto tu fe en Cristo, te bautizaste y te uniste a una Iglesia local. Estás echando raíces y quizá sirves como voluntario en algún ministerio.<br> Estás desarrollando la mentalidad correcta y subiendo tu nivel de compromiso.<br> Te mueves principalmente por lo que escuchas y por lo que tu meta es seguir instrucciones para tu crecimiento.<br>Te recomendamos que sigas de cerca a un hermano mayor, y resistas la presión de críticas, burlas y problemas que te puedan hacer frente. Debes afirmar tu comunión con Dios de manera disciplinada con la lectura de la Biblia y la oración. Desarrolla obediencia',
+      })
+      .then( ( result ) => 
+      {  
+        if ( result.isConfirmed ) 
+        {
+          this.navCtrl.navigateRoot( '/home' );
+        }
       });
 
     if ( c > a && c > b && c > d )
       Swal.fire({
         title: 'Tu nivel es AMIGO',
-        text: 'Te has vuelto confiable en la Iglesia a la que perteneces.<br> Has desarrollado por tiempo una actitud de servicio fiel y has crecido en madurez, aunque aún estás en el proceso de dar el fruto completo y correcto en el Reino.<br>Te recomendamos que aprendas el valor de amar y honrar a tus pastores y líderes y abraces la revelación de tu iglesia.<br> Tu palabra clave es intimidad para desarrollar fidelidad.',
+        html: 'Te has vuelto confiable en la Iglesia a la que perteneces.<br> Has desarrollado por tiempo una actitud de servicio fiel y has crecido en madurez, aunque aún estás en el proceso de dar el fruto completo y correcto en el Reino.<br>Te recomendamos que aprendas el valor de amar y honrar a tus pastores y líderes y abraces la revelación de tu iglesia.<br> Tu palabra clave es intimidad para desarrollar fidelidad.',
+      })
+      .then( ( result ) => 
+      {  
+        if ( result.isConfirmed ) 
+        {
+          this.navCtrl.navigateRoot( '/home' );
+        }
       });
 
     if ( d > a && d > b && d > c )
       Swal.fire({
         title: 'Tu nivel es HIJO',
-        text: 'Eres un discípulo que ha desarrollado completa su identidad.<br> Estás aprendiendo a operar como rey y sacerdote, fuera de las cuatro paredes de tu iglesia y te preparas para guiar el avance del Reino con los énfasis propios de la casa que te formó.<br> Te has vuelto un hacedor, así que la meta es que ocupes la posición a la que Dios te llamó.<br>Te recomendamos mantener tu lealtad a tu iglesia, prepararte en cómo expresar tu ministerio en el ámbito social, fuera del templo, y te mantengas en la llenura del espíritu para funcionar bien en tu asignación',
+        html: 'Eres un discípulo que ha desarrollado completa su identidad.<br> Estás aprendiendo a operar como rey y sacerdote, fuera de las cuatro paredes de tu iglesia y te preparas para guiar el avance del Reino con los énfasis propios de la casa que te formó.<br> Te has vuelto un hacedor, así que la meta es que ocupes la posición a la que Dios te llamó.<br>Te recomendamos mantener tu lealtad a tu iglesia, prepararte en cómo expresar tu ministerio en el ámbito social, fuera del templo, y te mantengas en la llenura del espíritu para funcionar bien en tu asignación',
+      })
+      .then( ( result ) => 
+      {  
+        if ( result.isConfirmed ) 
+        {
+          this.navCtrl.navigateRoot( '/home' );
+        }
       });
-    
-      this.navCtrl.navigateRoot('/home');
   }
 }
