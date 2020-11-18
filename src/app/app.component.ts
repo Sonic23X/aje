@@ -46,7 +46,7 @@ export class AppComponent implements OnInit
   {
     if( this.userService.isScanned )
     {
-      this.iab.create( 'http://aje.cludevs.com.mx/manual.pdf', '_system' );
+      this.iab.create( 'http://aej.cludevs.com.mx/manual.pdf', '_system' );
     }
     else
     {
