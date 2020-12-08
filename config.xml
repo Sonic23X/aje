@@ -45,6 +45,9 @@
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
+        <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
+            <string>Al estilo de Jesús desea acceder a su cámara para escanear un código QR</string>
+        </config-file>
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
