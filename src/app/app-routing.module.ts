@@ -3,6 +3,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { QrGuard } from './guards/qr.guard';
 
+/*
+{
+  path: 'qr',
+  loadChildren: () => import('./pages/qr/qr.module').then( m => m.QrPageModule),
+  canLoad: [ AuthGuardGuard ]
+},
+*/
+
 const routes: Routes = [
   {
     path: '',
@@ -19,24 +27,19 @@ const routes: Routes = [
     canLoad: [ AuthGuardGuard ]
   },
   {
-    path: 'qr',
-    loadChildren: () => import('./pages/qr/qr.module').then( m => m.QrPageModule),
-    canLoad: [ AuthGuardGuard ]
-  },
-  {
     path: 'testimonios',
     loadChildren: () => import('./pages/testimonios/testimonios.module').then( m => m.TestimoniosPageModule),
-    canLoad: [ QrGuard ]
+    canLoad: [ AuthGuardGuard ]
   },
   {
     path: 'devociones',
     loadChildren: () => import('./pages/devociones/devociones.module').then( m => m.DevocionesPageModule),
-    canLoad: [ QrGuard ]
+    canLoad: [ AuthGuardGuard ]
   },
   {
     path: 'formulario',
     loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule),
-    canLoad: [ QrGuard ]
+    canLoad: [ AuthGuardGuard ]
   },
   {
     path: 'perfil',
@@ -46,7 +49,7 @@ const routes: Routes = [
   {
     path: 'contenidos',
     loadChildren: () => import('./pages/contenidos/contenidos.module').then( m => m.ContenidosPageModule),
-    canLoad: [ QrGuard ]
+    canLoad: [ AuthGuardGuard ]
   }
 ];
 

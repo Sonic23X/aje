@@ -22,8 +22,6 @@ export class AppComponent implements OnInit
     private statusBar: StatusBar,
     private iab: InAppBrowser,
     public userService: UserService,
-    private navCtrl: NavController,
-    private storage: Storage
   ) 
   {
     this.initializeApp( );
@@ -44,14 +42,14 @@ export class AppComponent implements OnInit
 
   viewDocument() 
   {
-    if( this.userService.isScanned )
-    {
-      this.iab.create( 'http://aej.cludevs.com.mx/manual.pdf', '_system' );
-    }
-    else
-    {
-      this.navCtrl.navigateRoot('/qr');
-    }
+    
+    this.iab.create( 'http://aej.cludevs.com.mx/manual.pdf', '_system' );
+    
+  }
+
+  viewForm()
+  {
+    this.iab.create( 'http://bit.ly/3gUDV34', '_system' );
   }
 
   exit( )
